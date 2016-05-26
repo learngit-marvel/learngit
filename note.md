@@ -1,8 +1,13 @@
 # 分支管理
 ## 创建与合并分支
-查看分支：git branch
-创建分支：git branch <name>
-切换分支：git checkout <name>
-创建+切换分支：git checkout -b <name>
-合并某分支到当前分支：git merge <name>
-删除分支：git branch -d <name>
+查看分支：`git branch`
+创建分支：`git branch <name>`
+切换分支：`git checkout <name>`
+创建+切换分支：`git checkout -b <name>`
+合并某分支到当前分支：`git merge <name>`
+删除分支：`git branch -d <name>`
+## 解决冲突
+查看分支合并图：`git log --graph`
+## 分支管理策略
+合并分支时，加上`--no-ff`参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并。</br>
+master分支用于发布新版本，dev分支用于开发。开发者向dev合并各自的分支，发布新版本时把dev分支合并到master上。
